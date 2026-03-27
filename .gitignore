@@ -1,0 +1,68 @@
+node_modules/
+package-lock.json
+.env
+logs/
+*.log
+.DS_Store
+reports/
+*.csv
+!package.json
+!package-lock.json
+!**/tsconfig.json
+.vscode/
+.idea/
+# Keep the example CA certificate, but ignore custom ones
+!ca-certificate.pem
+
+# Build folder
+.next
+.node_modules/
+.node_modules/
+
+venv/
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+pip-wheel-metadata/
+.tox/
+coverage.*
+htmlcov/
+.mypy_cache/
+.pytest_cache/
+.cache/
+*.sqlite3
+*.db
+*.pot
+*.mo
+
+# Environments
+.env.*
+.envrc
+.env.bak
+*.env
+*.venv
+.venv/
+env/
+ENV/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# VSCode settings
+.vscode/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# macOS
+.DS_Store
+

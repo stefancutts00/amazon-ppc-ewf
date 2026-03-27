@@ -1,0 +1,43 @@
+{
+  "name": "amazon-ads-api-integration",
+  "version": "1.0.0",
+  "description": "Amazon Ads API Integration for Vendor Central with daily data sync",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "sync": "node src/sync.js",
+    "export": "node src/export.js",
+    "setup-db": "node src/database/setup.js",
+    "setup-database": "bash scripts/setup_database.sh",
+    "run": "bash scripts/run.sh",
+    "dev": "nodemon src/index.js",
+    "dashboard": "bash scripts/run.sh",
+    "dashboard:setup": "bash scripts/setup_database.sh",
+    "dashboard:api": "cd dashboard && python -m uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload",
+    "dashboard:frontend": "cd dashboard/frontend && npm start",
+    "streamlit": "streamlit run dashboard/app.py",
+    "test": "npm run test:api && npm run test:sync",
+    "test:api": "node tests/test_api.js",
+    "test:sync": "node tests/test_sync.js"
+  },
+  "keywords": [
+    "amazon-ads",
+    "api",
+    "vendor-central",
+    "automation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "pg": "^8.11.3",
+    "node-cron": "^3.0.2",
+    "winston": "^3.11.0",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
+
